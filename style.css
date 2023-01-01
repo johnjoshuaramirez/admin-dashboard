@@ -10,7 +10,7 @@ body {
    min-height: 100vh;
    display: grid;
    grid-template-columns: 16rem auto;
-   grid-template-rows: 12rem auto;
+   grid-template-rows: auto 1fr;
 }
 
 .dashboard-logo .material-icons {
@@ -62,39 +62,59 @@ aside a {
 }
 
 header {
-   grid-column: 2 / 3;
-   display: flex;
-
-   display: grid;
-   grid-template-columns: 2fr 1fr;
-   grid-template-rows: 1fr 1fr;
-   padding-left: 2rem;
-   padding-right: 2.75rem;
-
    /* debugging */
+   padding: 1.5rem;
    border: 1px solid black;
+   height: fit-content;
+}
+
+.top {
+   display: flex;
+   justify-content: space-between;
+   margin-bottom: 1rem;
+}
+
+.bottom {
+   display: flex;
+   justify-content: space-between;
 }
 
 header .search-bar {
    display: flex;
    align-items: center;
    gap: 1rem;
+   width: 60%;
 }
 
 header .user-account {
    display: flex;
    align-items: center;
-   justify-self: flex-end;
-   gap: 1.5rem;
 }
 
 header .user-name {
    font-weight: 700;
 }
 
+header .user-account .user-name {
+   font-size: 1.25rem;
+}
+
+header .user-account .user-avatar {
+   margin-left: 2rem;
+   margin-right: 1rem;
+}
+
 header .user-profile {
    display: flex;
    align-items: center;
+}
+
+header .user-profile .user-name {
+   font-size: 1.5rem;
+}
+
+header .user-profile span {
+   font-size: 1rem;
 }
 
 header .button-group {
@@ -118,16 +138,16 @@ header .user-avatar {
 header .user-account .user-avatar {
    border-radius: 50%;
    background-color: black;
-   height: 50px;
-   width: 50px;
+   height: 2.5rem;
+   width: 2.5rem;
 }
 
 header .user-profile .user-avatar {
    margin-right: 1rem;
    border-radius: 50%;
    background-color: black;
-   height: 50px;
-   width: 50px;
+   height: 75px;
+   width: 75px;
 }
 
 header button {
@@ -137,6 +157,7 @@ header button {
    color: black;
    height: 2.5rem;
    width: 6rem;
+   font-weight: 700;
 }
 
 main {
