@@ -168,10 +168,24 @@ main {
    margin: 1rem;
 }
 
-.your-projects {
+.projects,
+.trending,
+.announcements,
+.projects div,
+.announcements div,
+.trending {
+   border: 1px solid black;
+}
+
+.projects {
    grid-row: 1 / 3;
 }
 
 .trending {
    grid-column: 2 / 3;
+}
+
+.projects .container {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
