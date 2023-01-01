@@ -67,6 +67,9 @@ header {
    align-items: center;
    display: grid;
    grid-template-columns: 3fr 1fr;
+
+   /* debugging */
+   border: 1px solid black;
 }
 
 header .search-bar {
@@ -83,10 +86,12 @@ header input[type="search"] {
 
 header .user-account {
    display: flex;
+   align-items: center;
 }
 
 header .user-profile {
    display: flex;
+   align-items: center;
 }
 
 header .user-account .user-avatar {
