@@ -165,7 +165,7 @@ header button {
 .projects div,
 .announcements div,
 .trending {
-   border: 1px solid black;
+   /* border: 1px solid black; */
 }
 
 main {
@@ -188,6 +188,15 @@ main {
    gap: 2rem;
 }
 
+.projects .container > div {
+   border: 1px solid black;
+   padding: 1rem;
+}
+
+.announcements > div {
+   border: 1px solid black;
+}
+
 .announcements > div,
 .trending > div {
    min-width: 16rem;
@@ -202,6 +211,23 @@ main {
    grid-row: 2 / 3;
 }
 
+.trending .image {
+   height: 40px;
+   width: 40px;
+   border: 1px solid black;
+}
+
 .trending > div {
    padding: .75rem;
+   border: 1px solid black;
+}
+
+.trending .container > div {
+   display: flex;
+}
+
+.trending .user-info {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
 }
