@@ -309,3 +309,16 @@ img {
    height: auto;
    width: 70px;
 }
+
+::-webkit-scrollbar {
+   width: .8rem;
+}
+
+::-webkit-scrollbar-thumb {
+   background-color: gray;
+   border-radius: 100vw;
+}
+
+::-webkit-scrollbar-thumb:hover {
+   background-color: rgba(128, 128, 128, 0.8);
+}
