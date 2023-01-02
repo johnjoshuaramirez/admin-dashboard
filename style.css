@@ -63,6 +63,15 @@ aside a {
    font-weight: 500;
 }
 
+aside a:hover, 
+aside a:focus {
+   border: 1px solid white;
+   border-radius: 8px;
+   height: 2.2rem;
+   width: 14.2rem;
+   padding: .3rem;
+}
+
 header {
    padding: 1.5rem 2rem;
    height: fit-content;
@@ -207,7 +216,6 @@ main h3 {
    display: flex;
    gap: 1rem;
 }
-
 .announcements {
    margin-bottom: 2rem;
 }
