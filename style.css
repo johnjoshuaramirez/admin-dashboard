@@ -9,7 +9,7 @@
 body {
    min-height: 100vh;
    display: grid;
-   grid-template-columns: 16rem auto;
+   grid-template-columns: 18rem auto;
    grid-template-rows: auto 1fr;
 }
 
@@ -62,7 +62,7 @@ aside a {
 }
 
 header {
-   padding: 1.5rem;
+   padding: 1.5rem 2rem;
    height: fit-content;
    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1)
 }
@@ -88,6 +88,7 @@ header .search-bar {
 header .user-account {
    display: flex;
    align-items: center;
+   gap: 1.5rem;
 }
 
 header .user-name {
@@ -96,11 +97,6 @@ header .user-name {
 
 header .user-account .user-name {
    font-size: 1.25rem;
-}
-
-header .user-account .user-avatar {
-   margin-left: 2rem;
-   margin-right: 1rem;
 }
 
 header .user-profile {
@@ -120,7 +116,7 @@ header .button-group {
    display: flex;
    align-items: center;
    justify-self: flex-end;
-   gap: 1rem;
+   gap: 1.5rem;
 }
 
 header input[type="search"] {
@@ -142,7 +138,7 @@ header .user-account .user-avatar {
 }
 
 header .user-profile .user-avatar {
-   margin-right: 1rem;
+   margin-right: 1.5rem;
    border-radius: 50%;
    background-color: black;
    height: 75px;
@@ -152,8 +148,8 @@ header .user-profile .user-avatar {
 header button {
    border: none;
    border-radius: 5rem;
-   background-color: gray;
-   color: black;
+   background-color: black;
+   color: white;
    height: 2.5rem;
    width: 6rem;
    font-weight: 700;
@@ -180,18 +176,20 @@ h2 {
 
 .projects .container {
    display: grid;
-   grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+   grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
    gap: 2rem;
 }
 
 .projects .container > div {
-   border: 1px solid black;
+   border-left: 8px solid black;
+   border-radius: 8px;
+   box-shadow: 0 20px 25px -5px rgb(8 0 0 / 0.1);
    padding: 1rem;
-   border-radius: 1rem;
    min-height: 238px;
    max-height: 238px;
    display: flex;
    flex-direction: column;
+   background-color: white;
 }
 
 .projects p {
@@ -199,13 +197,12 @@ h2 {
    -webkit-line-clamp: 5;
    -webkit-box-orient: vertical;
    overflow: hidden;
+   color: gray;
 }
 
 .projects span {
    height: 40px;
    width: 40px;
-   border-radius: 50%;
-   border: 1px solid black;
    display: inline-block;
 }
 
@@ -217,9 +214,11 @@ h2 {
 
 .announcements .container,
 .trending .container {
-   min-width: 16rem;
-   border: 1px solid black;
-   border-radius: 1rem;
+   min-width: 18rem;
+   /* border: 1px solid white; */
+   border-radius: 8px;
+   background-color: white;
+   box-shadow: 0 20px 25px -5px rgb(8 0 0 / 0.1);
 }
 
 .announcements p,
@@ -230,17 +229,24 @@ h2 {
    overflow: hidden;
 }
 
+
+.announcements p,
+.trending .user-text {
+   color: gray;
+} 
+
 .announcements {
    margin-bottom: 2rem;
 }
 
 .announcements .container>div {
-   margin: 1.5rem;
+   padding: 1.75rem 0;
+   margin: 0 2rem;
    
 }
 
 .announcements .container>div+div {
-   border-top: 1px solid gray;
+   border-top: 1px solid rgba(128, 128, 128, 0.377);
    padding-top: 1.5rem;
 }
 
@@ -250,8 +256,7 @@ h2 {
 }
 
 .trending>div {
-   padding: 1.5rem;
-   border: 1px solid black;
+   padding: 1.75rem;
 }
 
 .trending .image {
