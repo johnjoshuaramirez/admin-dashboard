@@ -1,3 +1,7 @@
+:root {
+
+}
+
 * {
    box-sizing: border-box;
    margin: 0;
@@ -67,13 +71,13 @@ header {
    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1)
 }
 
-.top {
+header .top {
    display: flex;
    justify-content: space-between;
    margin-bottom: 1rem;
 }
 
-.bottom {
+header .bottom {
    display: flex;
    justify-content: space-between;
 }
@@ -85,10 +89,17 @@ header .search-bar {
    width: 60%;
 }
 
+header input[type="search"] {
+   border: 1px solid black;
+   border-radius: 5rem;
+   height: 2.25rem;
+   width: 100%;
+}
+
 header .user-account {
    display: flex;
    align-items: center;
-   gap: 1.5rem;
+   gap: 1rem;
 }
 
 header .user-name {
@@ -99,37 +110,6 @@ header .user-account .user-name {
    font-size: 1.25rem;
 }
 
-header .user-profile {
-   display: flex;
-   align-items: center;
-}
-
-header .user-profile .user-name {
-   font-size: 1.5rem;
-}
-
-header .user-profile span {
-   font-size: 1rem;
-}
-
-header .button-group {
-   display: flex;
-   align-items: center;
-   justify-self: flex-end;
-   gap: 1.5rem;
-}
-
-header input[type="search"] {
-   border: 1px solid black;
-   border-radius: 5rem;
-   height: 2.5rem;
-   width: 100%;
-}
-
-header .user-avatar {
-   flex-shrink: 0;
-}
-
 header .user-account .user-avatar {
    border-radius: 50%;
    background-color: black;
@@ -137,12 +117,25 @@ header .user-account .user-avatar {
    width: 2.5rem;
 }
 
-header .user-profile .user-avatar {
-   margin-right: 1.5rem;
-   border-radius: 50%;
-   background-color: black;
-   height: 75px;
-   width: 75px;
+header .user-profile {
+   display: flex;
+   align-items: center;
+   gap: 1rem;
+}
+
+header .user-profile span {
+   font-size: 1rem;
+}
+
+header .user-profile .user-name {
+   font-size: 1.5rem;
+}
+
+header .button-group {
+   display: flex;
+   align-items: center;
+   justify-self: flex-end;
+   gap: 1rem;
 }
 
 header button {
@@ -165,7 +158,7 @@ main {
    background-color: rgba(168, 162, 158, 0.2);
 }
 
-h2 {
+main h2 {
    margin-bottom: 1rem;
 }
 
@@ -185,8 +178,8 @@ h2 {
    border-radius: 8px;
    box-shadow: 0 20px 25px -5px rgb(8 0 0 / 0.1);
    padding: 1rem;
-   min-height: 238px;
-   max-height: 238px;
+   min-height: 230px;
+   max-height: 230px;
    display: flex;
    flex-direction: column;
    background-color: white;
@@ -200,22 +193,25 @@ h2 {
    color: gray;
 }
 
-.projects span {
-   height: 40px;
-   width: 40px;
-   display: inline-block;
-}
-
 .projects .button-group {
    align-self: flex-end;
    margin-top: auto;
    margin-bottom: 0;
 }
 
+.projects span {
+   height: 40px;
+   width: 40px;
+   display: inline-block;
+}
+
+.announcements {
+   margin-bottom: 2rem;
+}
+
 .announcements .container,
 .trending .container {
    min-width: 18rem;
-   /* border: 1px solid white; */
    border-radius: 8px;
    background-color: white;
    box-shadow: 0 20px 25px -5px rgb(8 0 0 / 0.1);
@@ -234,10 +230,6 @@ h2 {
 .trending .user-text {
    color: gray;
 } 
-
-.announcements {
-   margin-bottom: 2rem;
-}
 
 .announcements .container>div {
    padding: 1.75rem 0;
@@ -269,6 +261,7 @@ h2 {
 
 .trending .container>div {
    display: flex;
+   gap: 1rem;
 }
 
 .trending .container>div+div {
@@ -279,4 +272,13 @@ h2 {
    display: flex;
    flex-direction: column;
    justify-content: center;
+}
+
+img {
+   height: auto; width: 40px
+}
+
+.user-profile img {
+   height: auto;
+   width: 70px;
 }
