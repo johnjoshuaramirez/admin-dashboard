@@ -88,10 +88,14 @@ header .search-bar {
 }
 
 header input[type="search"] {
-   border: 1px solid black;
+   border: 1px solid rgba(128, 128, 128, 0.1);
    border-radius: 5rem;
    height: 2.25rem;
    width: 100%;
+   background-color: rgba(168, 162, 158, 0.2);
+   padding-left: 1rem;
+   padding-right: 1rem;
+   font-size: 1rem;
 }
 
 header .user-account {
